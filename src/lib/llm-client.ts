@@ -4,7 +4,7 @@ const KEY_MODEL = "kimi-llm-model";
 
 const DEFAULT_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 const DEFAULT_MODEL = "gpt-4o-mini";
-const ANTHROPIC_ENDPOINT = "https://api.anthropic.com/v1/messages";
+const ANTHROPIC_ENDPOINT = "/api/llm";
 const ANTHROPIC_VERSION = "2023-06-01";
 
 function readLS(key: string): string {

@@ -1154,7 +1154,7 @@ function MessageItem({
               fontStyle: "italic",
             }}
           >
-            {showThinking ? "▼" : "▶"} thinking · {msg.thinking.length} 字
+            {showThinking ? "▼" : "▶"} 思考 · {msg.thinking.length} 字
           </button>
           {showThinking && (
             <div
@@ -1223,7 +1223,7 @@ function MessageItem({
             textTransform: "uppercase",
           }}
         >
-          in {msg.cost.inTok} · out {msg.cost.outTok}
+          輸入 {msg.cost.inTok} · 輸出 {msg.cost.outTok}
         </div>
       )}
       {showActions && (

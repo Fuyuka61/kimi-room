@@ -903,7 +903,7 @@ export function ChatRoom() {
           ref={draftRef}
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
-          placeholder="message…"
+          placeholder="說點什麼…"
           rows={1}
           style={{
             flex: 1,
@@ -924,7 +924,7 @@ export function ChatRoom() {
           type="button"
           onClick={send}
           disabled={busy || !draft.trim()}
-          aria-label="send"
+          aria-label="發送"
           style={{
             width: 32,
             height: 32,

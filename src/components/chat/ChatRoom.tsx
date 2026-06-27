@@ -634,7 +634,7 @@ export function ChatRoom() {
               marginBottom: 6,
             }}
           >
-            theme
+            主題
           </div>
           <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
             {(["day", "night"] as ChatTheme[]).map((t) => {
@@ -702,7 +702,7 @@ export function ChatRoom() {
               marginBottom: 6,
             }}
           >
-            background
+            背景
           </div>
           <div
             style={{
@@ -745,7 +745,7 @@ export function ChatRoom() {
               marginBottom: 6,
             }}
           >
-            system context
+            系統設定
           </div>
           <Link
             href="/backstage/character"

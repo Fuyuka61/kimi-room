@@ -767,8 +767,8 @@ export function ChatRoom() {
                 <div>
                   SP {sysStats.spChars} 字 ·{" "}
                   {sysStats.memInjectOn
-                    ? `${sysStats.memTotalActive} 条 memory 注入`
-                    : "memory 不注入"}
+                    ? `${sysStats.memTotalActive} 條記憶注入`
+                    : "記憶不注入"}
                 </div>
                 <div style={{ marginTop: 4, color: p.inkMute, fontSize: 9, letterSpacing: 1 }}>
                   → /backstage/character
@@ -796,7 +796,7 @@ export function ChatRoom() {
               textTransform: "uppercase",
             }}
           >
-            ↺ closeout · 新窗口
+            ↺ 結算 · 新窗口
           </button>
           <div style={{ marginTop: 6, display: "flex", gap: 6 }}>
             <Link
@@ -817,7 +817,7 @@ export function ChatRoom() {
                 textTransform: "uppercase",
               }}
             >
-              ↶ 过往 sessions
+              ↶ 過往對話
             </Link>
           </div>
         </div>
@@ -841,7 +841,7 @@ export function ChatRoom() {
         }}
       >
         {session.msgs.length === 0 && !busy ? (
-          <EmptyRose message="今天还没说话 · 写一句" palette="gothic" />
+          <EmptyRose message="今天還沒說話 · 說一句" palette="gothic" />
         ) : (
           session.msgs.map((m, i) => {
             const prev = session.msgs[i - 1];

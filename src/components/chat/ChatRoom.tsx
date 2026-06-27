@@ -586,7 +586,7 @@ export function ChatRoom() {
         <button
           type="button"
           onClick={() => setShowBgPicker((v) => !v)}
-          aria-label="more"
+          aria-label="更多"
           style={{
             background: "transparent",
             border: "none",

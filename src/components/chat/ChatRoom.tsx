@@ -1259,8 +1259,8 @@ function MessageItem({
                 : playState === "playing"
                   ? "◼ 停"
                   : playState === "error"
-                    ? "✕ 重试"
-                    : "听"}
+                    ? "✕ 重試"
+                    : "聽"}
             </button>
           )}
           <button
@@ -1283,7 +1283,7 @@ function MessageItem({
               textTransform: "uppercase",
             }}
           >
-            copy
+            複製
           </button>
           {onRetry && (
             <button
@@ -1306,7 +1306,7 @@ function MessageItem({
                 textTransform: "uppercase",
               }}
             >
-              ↻ retry
+              ↻ 重試
             </button>
           )}
         </div>

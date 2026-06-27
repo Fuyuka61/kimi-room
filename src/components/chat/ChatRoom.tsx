@@ -295,7 +295,7 @@ export function ChatRoom() {
             ? {
                 ...m,
                 content:
-                  "(LLM API key 没填 · 进 /backstage/settings 填 endpoint + key 才能 chat)",
+                  "(尚未設定 API · 請至 /backstage/settings 填入 endpoint 與 key)",
               }
             : m,
         ),
@@ -313,7 +313,7 @@ export function ChatRoom() {
         llmMsgs.push({ role: m.role, content: m.content });
       }
       const r = await llmChat(llmMsgs);
-      const text = r.text?.trim() || "(空响应)";
+      const text = r.text?.trim() || "(空回應)";
       const usage = (r.raw as { usage?: { prompt_tokens?: number; completion_tokens?: number } } | undefined)?.usage;
       const cost = usage
         ? { inTok: usage.prompt_tokens ?? 0, outTok: usage.completion_tokens ?? 0 }
@@ -445,8 +445,8 @@ export function ChatRoom() {
             id: `m-${Date.now()}`,
             role: "assistant",
             content: title
-              ? `新窗. 上次存为 "${title}". 接着说.`
-              : "新窗. 接着说.",
+              ? `新窗口. 上次記錄 "${title}". 繼續說.`
+              : "新窗口. 繼續說.",
             ts: new Date().toISOString(),
           },
         ],
@@ -454,7 +454,7 @@ export function ChatRoom() {
       setSession(fresh);
     } catch (e) {
       console.error("[chat:closeout]", e);
-      alert("closeout 失败.");
+      alert("結算失敗.");
     } finally {
       setBusy(false);
     }
